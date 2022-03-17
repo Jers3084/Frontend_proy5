@@ -34,7 +34,7 @@ export const Home = () => {
       </section>
 
       <section className={styles.seccion2}>
-        <Link name="saltoseccion1"></Link>
+        <Link name="saltoseccion1" to="#"></Link>
         <header className={styles.tituloservicios}>
           <h1>Nuestros Servicios</h1>
           <br />

@@ -101,10 +101,7 @@ export const Home = () => {
         <div className={styles.pie}>
           <div className={styles.redesSociales}>
             <div className={styles.linkRedesSociales}>
-              <Link
-                className={styles.iconos}
-                to=""
-              >
+              <Link className={styles.iconos} to="">
                 <img src={facebook} alt="" width="20px" height="20px" />{' '}
                 Facebook
               </Link>

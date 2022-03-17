@@ -1,0 +1,658 @@
+.seccion1 {
+  width: 100%vw;
+  height: 87.8vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  background-color: #20b2aa;
+}
+
+.txtSeccion1 {
+  width: 58%;
+  height: 431px;
+  padding-top: 20px;
+  color: white;
+  padding-left: 5%;
+  background-color: #20b2aa;
+}
+
+.titulo {
+  margin-top: 30px;
+  font-size: 70px;
+}
+
+.txtCuerpo {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.entradaCorreo {
+  margin-top: 30px;
+  width: 80%;
+  min-width: 20%;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 20px;
+  border: #20b2aa 3px solid;
+}
+
+.boton {
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #05863f;
+  font-size: 20px;
+  color: white;
+  border: #20b2aa 3px solid;
+}
+.boton:hover {
+  color: #20b2aa;
+  border: #20b2aa 3px double;
+}
+
+.imagenPrincipal {
+  width: 40%;
+  height: 548px;
+  background-image: url(./img/14600888_10210739706675399_2352827580365506760_n.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.seccion2 {
+  padding-top: 50px;
+  width: 100%vw;
+  height: 700px;
+  background-color: #e9e7e7;
+}
+
+.tituloservicios {
+  font-size: 20px;
+  text-align: center;
+  background-color: #e9e7e7;
+}
+
+.subTituloServicios {
+  font-size: 20px;
+  text-align: center;
+}
+
+.tarjetas {
+  padding-top: 50px;
+  width: 100%vw;
+  height: 700px;
+  background-color: #e9e7e7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.tarjeta {
+  width: 20%;
+}
+
+.imgAcupuntura {
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/acupuntura-848x449.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imgQuiropraxiaOsteopatia {
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/quiropraxia.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imgRehabilitacion {
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/terapia-fisica-y-rehabilitacion-a-domicilio-en-maracaibo-752701-mlv20375098598_082015-f-300x200.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.imgLinfatico {
+  width: 100%;
+  height: 300px;
+  background-image: url(./img/drenaje_linfatico.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.desc {
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.descripciones {
+  text-align: justify;
+}
+
+.seccion3 {
+  width: 100%vw;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  background-color: rgb(32, 178, 170);
+}
+
+.imgPagina3 {
+  width: 50%;
+  height: 600px;
+  background-image: url(./img/82778675_2274160899551120_3557171994212433920_n.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.txtseccion3 {
+  width: 40%;
+  height: 431px;
+  padding-top: 150px;
+  color: white;
+  padding-left: 5%;
+  background-color: #20b2aa;
+}
+
+.tituloSeccion3 {
+  font-size: 35px;
+}
+
+.textoseccion3 {
+  padding: 30px 0px 35px;
+}
+
+.boton2 {
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #05863f;
+  font-size: 20px;
+  color: white;
+  border: #20b2aa 3px solid;
+}
+.boton2:hover {
+  color: #20b2aa;
+  border: #20b2aa 3px double;
+}
+
+footer {
+  width: 100%vw;
+  height: 50px;
+  background-color: #e9e7e7;
+}
+
+.redesSociales {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.copyright {
+  font-size: 15px;
+  text-align: center;
+  color: gray;
+}
+
+@media screen and (max-width: 1020px) {
+  .none {
+    width: 400px;
+    display: none;
+  }
+
+  .seccion1 {
+    width: 100%vw;
+    height: 1500px;
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  .txtSeccion1 {
+    width: 90%;
+    height: 500px;
+    padding-top: 100px;
+  }
+
+  .titulo {
+    font-size: 40px;
+  }
+
+  .boton {
+    display: block;
+    border-radius: 15px;
+    text-align: center;
+  }
+
+
+  .txtPie {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .imagenPrincipal {
+    width: 100%;
+    height: 900px;
+  }
+
+  .seccion2 {
+    height: 800px;
+  }
+
+  .seccion3 {
+    width: 100%vw;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    background-color: rgb(32, 178, 170);
+  }
+
+  .imgPagina3 {
+    width: 50%;
+    height: 700px;
+    background-image: url(./img/82778675_2274160899551120_3557171994212433920_n.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  .txtseccion3 {
+    width: 40%;
+    height: 431px;
+    padding-top: 150px;
+    color: white;
+    padding-left: 5%;
+    background-color: #20b2aa;
+  }
+
+  .tituloSeccion3 {
+    font-size: 35px;
+  }
+
+  .textoseccion3 {
+    padding: 30px 0px 35px;
+  }
+
+  .boton2 {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #05863f;
+    font-size: 20px;
+    color: white;
+    border: #20b2aa 3px solid;
+  }
+  .boton2:hover {
+    color: #20b2aa;
+    border: #20b2aa 3px double;
+  }
+
+  footer {
+    width: 100%vw;
+    height: 400px;
+    background-color: #e9e7e7;
+  }
+
+  .pie {
+    padding-top: 30px;
+    width: 100%vw;
+    height: 300px;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .redesSociales {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .menusPie {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  ul.inferior {
+    margin-top: 30px;
+    list-style-type: none;
+  }
+
+  li.linferior {
+    margin: 15px 0px 15px;
+    text-decoration: none;
+  }
+
+  a.linkinferior {
+    text-decoration: none;
+    color: gray;
+  }
+
+  a.linkinferior:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright {
+    font-size: 15px;
+    text-align: center;
+    color: gray;
+  }
+}
+
+@media screen and (max-width: 701px) {
+  li.menucomprimido {
+    display: inline;
+    position: absolute;
+    right: 2%;
+    top: 3%;
+  }
+
+  ul.superior {
+    width: 100%vw;
+    height: 80px;
+    list-style-type: none;
+    margin-left: 50px;
+    padding: 0;
+    overflow: visible;
+    display: flex;
+    justify-content: start;
+  }
+
+  li.superior a {
+    width: 100%;
+    display: none;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+  }
+  
+  .imagenmenu:hover {
+    border: 3px double black;
+    border-radius: 15%;
+  }
+  
+  .ligamenu:visited {
+    border: 3px double black;
+    border-radius: 15%;
+  }
+  .seccion1 {
+    width: 100%vw;
+    height: 1300px;
+    display: block;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    background-color: #20b2aa;
+  }
+
+  .txtSeccion1 {
+    width: 90%;
+    height: 500px;
+    padding-top: 100px;
+    color: white;
+    padding-left: 5%;
+    background-color: #20b2aa;
+  }
+
+  .titulo {
+    margin-top: 30px;
+    font-size: 40px;
+  }
+
+  .txtCuerpo {
+    margin-top: 50px;
+    font-size: 20px;
+  }
+
+  .formcorreo {
+    width: 100%vw;
+    height: auto;
+  }
+  .entradaCorreo {
+    margin-top: 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    font-size: 20px;
+    border: #20b2aa 3px solid;
+  }
+
+  .boton {
+    display: block;
+    width: 93%;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #05863f;
+    font-size: 20px;
+    color: white;
+    border: #20b2aa 3px solid;
+  }
+  .boton:hover {
+    color: #20b2aa;
+    border: #20b2aa 3px double;
+  }
+
+  .txtPie {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+  .imagenPrincipal {
+    width: 100%;
+    height: 700px;
+    background-image: url(./img/14600888_10210739706675399_2352827580365506760_n.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .seccion2 {
+    padding-top: 50px;
+    width: 100%vw;
+    height: auto;
+    background-color: #e9e7e7;
+  }
+
+  .tituloservicios {
+    font-size: 20px;
+    text-align: center;
+    background-color: #e9e7e7;
+  }
+
+  .subTituloServicios {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .tarjetas {
+    padding-top: 50px;
+    width: 100%vw;
+    height: auto;
+    background-color: #e9e7e7;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .tarjeta {
+    width: 100%;
+  }
+
+  .imgAcupuntura {
+    width: 100%;
+    height: 300px;
+    background-image: url(./img/acupuntura-848x449.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imgQuiropraxiaOsteopatia {
+    width: 100%;
+    height: 300px;
+    background-image: url(./img/quiropraxia.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imgRehabilitacion {
+    width: 100%;
+    height: 300px;
+    background-image: url(./img/terapia-fisica-y-rehabilitacion-a-domicilio-en-maracaibo-752701-mlv20375098598_082015-f-300x200.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .imgLinfatico {
+    width: 100%;
+    height: 300px;
+    background-image: url(./img/drenaje_linfatico.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .desc {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  }
+
+  .descripciones {
+    text-align: justify;
+    padding-bottom: 20px;
+  }
+
+  .seccion3 {
+    width: 100%vw;
+    height: auto;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    background-color: rgb(32, 178, 170);
+  }
+
+  .imgPagina3 {
+    width: 100%;
+    height: 500px;
+    background-image: url(./img/82778675_2274160899551120_3557171994212433920_n.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .txtseccion3 {
+    width: 100%;
+    height: 431px;
+    padding-top: 90px;
+    color: white;
+    padding-left: 5%;
+    background-color: #20b2aa;
+  }
+
+  .tituloSeccion3 {
+    font-size: 35px;
+  }
+
+  .textoseccion3 {
+    padding: 30px 0px 35px;
+  }
+
+  .boton2 {
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #05863f;
+    font-size: 20px;
+    color: white;
+    border: #20b2aa 3px solid;
+  }
+  .boton2:hover {
+    color: #20b2aa;
+    border: #20b2aa 3px double;
+  }
+
+  footer {
+    width: 100%vw;
+    height: 400px;
+    background-color: #e9e7e7;
+  }
+
+  .pie {
+    padding-top: 30px;
+    width: 100%vw;
+    height: 300px;
+    display: block;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .redesSociales {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .menusPie {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  ul.inferior {
+    margin-top: 30px;
+    list-style-type: none;
+  }
+
+  li.linferior {
+    margin: 15px 0px 15px;
+    text-decoration: none;
+  }
+
+  a.linkinferior {
+    text-decoration: none;
+    color: gray;
+  }
+
+  a.linkinferior:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  .copyright {
+    font-size: 15px;
+    text-align: center;
+    color: gray;
+  }
+}
+

@@ -26,7 +26,7 @@ export const IniciarSesion = () => {
   const enviarLogin = async () => {
     try {
       return fetch('http://35.192.83.171:9000/api/usuarios/login', {
-        method: 'POST', // or 'PUT'
+        method: 'POST',
         body: JSON.stringify({ username, password }), // data can be `string` or {object}!
         headers: {
           'Content-Type': 'application/json',
@@ -38,10 +38,12 @@ export const IniciarSesion = () => {
           const cUsuario = response.data.user.username
           const nombre = response.data.user.nombre
           const correo = response.data.user.email
+          const id = response.data.user._id
           sessionStorage.setItem('tokenUsuario', tokenU)
           sessionStorage.setItem('cuentaUsuario', cUsuario)
           sessionStorage.setItem('nombreUsuario', nombre)
           sessionStorage.setItem('correoUsuario', correo)
+          sessionStorage.setItem('idUsuario', id)
           userc.token = true
           setUserc({ ...userc })
         })
@@ -53,6 +55,7 @@ export const IniciarSesion = () => {
 
   return (
     <div className={styles.contenedor}>
+      <h2 className={styles.titulo}>Iniciar Sesión</h2>
       <form className={styles.formato} onSubmit={handleSubmitl}>
         <div className={styles.fullentry}>
           <label htmlFor="userN" className={styles.formlabel}>

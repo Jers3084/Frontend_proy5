@@ -1,6 +1,7 @@
 .seccion1 {
+  padding-top: 80px;
   width: 100%vw;
-  height: 87.8vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -135,19 +136,33 @@
   text-align: justify;
 }
 
-footer {
+.piedepagina {
+  margin-top: 90px;
   width: 100%vw;
   height: 50px;
   background-color: #e9e7e7;
+  align-items: center;
 }
 
 .redesSociales {
   width: 100%;
   height: 30px;
   display: flex;
-  flex-direction: row;
+  flex-direction:column;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.icono1 {
+  width: 40%;
+  text-align: right;
+}
+
+.icono2 {
+  width: 40%;
+  text-align: left;
 }
 
 .copyright {

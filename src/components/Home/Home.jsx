@@ -98,22 +98,16 @@ export const Home = () => {
       </section>
 
       <footer className={styles.piedepagina}>
-        <div className={styles.pie}>
           <div className={styles.redesSociales}>
-            <div className={styles.linkRedesSociales}>
-              <Link className={styles.iconos} to="">
+              <Link className={styles.icono1} to="">
                 <img src={facebook} alt="" width="20px" height="20px" />{' '}
                 Facebook
               </Link>
-            </div>
-            <div className={styles.linkRedesSociales}>
-              <Link to="" className={styles.iconos}>
+              <Link to="" className={styles.icono2}>
                 <img src={instagram} alt="" width="20px" height="20px" />{' '}
                 Instagram
               </Link>
-            </div>
           </div>
-        </div>
         <hr />
         <p className={styles.copyright}>
           © 2021 Vid Natura. Todos los derechos reservados. Esta es una página

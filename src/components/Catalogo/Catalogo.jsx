@@ -1,9 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
+import {Card} from "../Card/Card";
+import styles from "./Catalogo.module.css";
+
 
 export const Catalogo = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    obtenerProductos();
+  }, []);
+
+  const obtenerProductos = async () => {
+    await fetch("http://35.192.83.171:9000/api/productos")
+      .then((resp) => resp.json())
+      .then((value) => {
+        if (value.success) {
+          setProducts(value.data);
+          console.log(value.data);
+        }
+      });
+  };
+
   return (
-    <div>
-      <h1>Catalogo</h1>
-    </div>
-  )
-}
+    < >
+      <div className={styles.contenedor}>
+      <h2>Productos</h2>
+        <div className="row row-cols-1 row-cols-md-3 g-4 ">
+        {products.map((x) => {
+          return <Card key={x._id} {...x} />;
+        })}
+        </div>
+      </div>
+    </>
+  );
+};
+
+ 

@@ -13,6 +13,9 @@ export const Navbar = () => {
   const logout = () => {
     sessionStorage.setItem('tokenUsuario', null)
     sessionStorage.setItem('cuentaUsuario', null)
+    sessionStorage.setItem('nombreUsuario', null)
+    sessionStorage.setItem('correoUsuario', null)
+    sessionStorage.setItem('idUsuario', null)
     userc.token = false
     setUserc({ ...userc })
   }
@@ -32,15 +35,20 @@ export const Navbar = () => {
               Productos
             </Link>
           </li>
+          <li className={styles.li}>
+            <Link to="/carrito" className={styles.link}>
+              Carrito {userc.shopping.length}
+            </Link>
+          </li>
           <li className={styles.space}>
             <img src={flag} alt="" style={{ width: '30px' }} /> Moneda Pesos Mx
           </li>
           <li className={styles.li_submenu}>
             {userc.token ? (
               <>
-                <p to="#" className={styles.dropdown}>
+                <Link to="#" className={styles.dropdown}>
                   Usuario: {usuario}
-                </p>
+                </Link>
                 <ul>
                   <li className={styles.li_dropdown}>
                     <Link to="/perfildeusuario" className={styles.link}>
@@ -48,7 +56,7 @@ export const Navbar = () => {
                     </Link>
                   </li>
                   <li className={styles.li_dropdown}>
-                    <Link className={styles.link} onClick={logout}>
+                    <Link className={styles.link} to="#" onClick={logout}>
                       Cerrar Sesion
                     </Link>
                   </li>

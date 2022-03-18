@@ -5,14 +5,19 @@
 }
 
 .contenedor {
+  padding-top: 80px;
   width: 100%;
-  height:  87.8vh;
+  height:  100vh;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
   align-items: center;
   text-align: center;
   background-color: #20b2aa;
+}
+
+.titulo {
+  padding: 20px;
+  text-align: center;
 }
 
 .formato {

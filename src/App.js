@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css'
 import { Navbar } from './components/Navbar/Navbar'
 import { Catalogo } from './components/Catalogo/Catalogo'
+import { Carrito } from './components/Carrito/Carrito'
 import { Registro } from './components/Registro/Registro'
 import { IniciarSesion } from './components/IniciarSesion/IniciarSesion'
 import { Detalle } from './components/Detalle/Detalle'
@@ -21,6 +22,9 @@ function App() {
           <Switch>
             <Route path="/catalogo">
               <Catalogo />
+            </Route>
+            <Route path="/carrito">
+              <Carrito />
             </Route>
             <Route path="/iniciarsesion">
               <IniciarSesion />

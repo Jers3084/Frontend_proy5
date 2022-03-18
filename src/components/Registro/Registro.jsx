@@ -40,6 +40,7 @@ export const Registro = () => {
 
   return (
     <div className={styles.contenedor}>
+      <h2 className={styles.titulo}>Registro</h2>
       <form className={styles.formato} onSubmit={handleSubmitr}>
         <div className={styles.fullentry}>
           <label htmlFor="validationCustom01" className={styles.formlabel}>

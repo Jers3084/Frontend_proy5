@@ -5,22 +5,19 @@
 }
 
 .contenedor {
+  padding-top: 80px;
   width: 100%;
-  height:  87.8vh;
+  height:  100vh;
   margin-right: auto;
   margin-left: auto;
-  display: flex;
   align-items: center;
   text-align: center;
   background-color: #20b2aa;
 }
 
-.contenedorlistado {
-  width: 30%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: left;
-  border: #fff 3px solid;
+.titulo {
+  padding: 20px;
+  text-align: center;
 }
 
 .formato {
@@ -60,14 +57,13 @@
   font-size: 1rem;
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-  border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .boton:hover {
   background-color: #000397;
   border: 1px solid #000397;
 }
-
 
 .formlabel {
   margin-bottom: 0.5rem;
@@ -99,11 +95,9 @@
   .formato {
     width: 100%;
   }
-
 }
 
 @media screen and (max-width: 1200px) {
-  
 }
 
 @media screen and (max-width: 992px) {
@@ -114,5 +108,4 @@
   .formato {
     width: 100%;
   }
-
 }

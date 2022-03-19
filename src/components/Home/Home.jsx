@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from './Home.module.css'
-import facebook from './img/facebook_social_media_icon_gris.png'
-import instagram from './img/circlesocialinstagram_gris.png'
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
+import facebook from "./img/facebook_social_media_icon_gris.png";
+import instagram from "./img/circlesocialinstagram_gris.png";
 
 export const Home = () => {
   return (
@@ -12,6 +12,18 @@ export const Home = () => {
           <h1 className={styles.titulo}>Tu salud en manos expertas</h1>
           <span className={styles.relleno} />
           <p className={styles.txtCuerpo}>
+            <p className={styles.txtCuerpo}>
+              Somos una clinica dedicada a la Fisioterapia con Técnicas de
+              Masaje Terapeutico Tradicional Shiatsu Namikoshi. Acupuntura y
+              Medicina China, en donde se proporcionan diversos tratamientos con
+              terapias alternativas, para diferentes patologias.
+            </p>
+            <p className={styles.txtCuerpo}>
+              Patologías Neurologicas como Paralisis Facial, Apoplejías, Tics,
+              Patologías Musculoesqueleticas, Artritis, Hombro Rigido, Sindrome
+              del codo, Tunel Carpiano, Ciatica, Lumbalgia, Circulatorias,
+              Edemas, Linfidema, Lipodema, PostOperatorios, posFracturas, etc
+            </p>
             Para recuperar tu salud, acércate a nosotros y conoce nuestros
             servicios
           </p>
@@ -98,16 +110,14 @@ export const Home = () => {
       </section>
 
       <footer className={styles.piedepagina}>
-          <div className={styles.redesSociales}>
-              <Link className={styles.icono1} to="">
-                <img src={facebook} alt="" width="20px" height="20px" />{' '}
-                Facebook
-              </Link>
-              <Link to="" className={styles.icono2}>
-                <img src={instagram} alt="" width="20px" height="20px" />{' '}
-                Instagram
-              </Link>
-          </div>
+        <div className={styles.redesSociales}>
+          <Link className={styles.icono1} to="">
+            <img src={facebook} alt="" width="20px" height="20px" /> Facebook
+          </Link>
+          <Link to="" className={styles.icono2}>
+            <img src={instagram} alt="" width="20px" height="20px" /> Instagram
+          </Link>
+        </div>
         <hr />
         <p className={styles.copyright}>
           © 2021 Vid Natura. Todos los derechos reservados. Esta es una página
@@ -115,5 +125,5 @@ export const Home = () => {
         </p>
       </footer>
     </>
-  )
-}
+  );
+};

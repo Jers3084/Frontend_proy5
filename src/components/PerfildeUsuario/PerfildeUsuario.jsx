@@ -1,35 +1,30 @@
-import React, { useState, useContext } from "react";
-import { UserContext } from "../../Context/UserContext";
+import React, { useState } from "react";
+import { withRouter } from "react-router-dom";
 import styles from "./PerfildeUsuario.module.css";
 
-export const PerfildeUsuario = () => {
+function PerfildeUsuario(props) {
   var id = sessionStorage.getItem("idUsuario");
   var nombreU = sessionStorage.getItem("nombreUsuario");
   var usernameU = sessionStorage.getItem("cuentaUsuario");
   var correoU = sessionStorage.getItem("correoUsuario");
   var token = sessionStorage.getItem("tokenUsuario");
-  const { userc } = useContext(UserContext);
   const [editar, setEditar] = useState(false);
   const [nombre, setNombre] = useState(nombreU);
   const [email, setEmail] = useState(correoU);
-  const [password, setPassword] = useState("");
 
   const handleSubmitr = async (e) => {
     e.preventDefault();
-
     await updateRegistro();
     setNombre(nombreU);
     setEmail(correoU);
-    setPassword("");
     setEditar(false);
-    alert("Registro Actualizado");
   };
 
   const updateRegistro = async () => {
     try {
       return fetch("http://35.192.83.171:9000/api/usuarios/actualizar", {
         method: "POST",
-        body: JSON.stringify({ id, nombre, email }), // data {object}
+        body: JSON.stringify({ id, nombre, email }),
         headers: {
           "Content-Type": "application/json",
           authorization: token,
@@ -41,6 +36,7 @@ export const PerfildeUsuario = () => {
           sessionStorage.setItem("nombreUsuario", nombreU);
           correoU = response.data.email;
           sessionStorage.setItem("correoUsuario", correoU);
+          alert("Registro Actualizado");
         });
     } catch (e) {
       console.log("hubo un error");
@@ -55,6 +51,15 @@ export const PerfildeUsuario = () => {
   const cancel = () => {
     return setEditar(false);
   };
+
+  const actualizarPassword = () => {
+    props.history.push("/cambiarpassword");
+  };
+
+  const salir = () => {
+    props.history.push("/");
+  };
+
   return (
     <>
       {!editar ? (
@@ -106,6 +111,9 @@ export const PerfildeUsuario = () => {
             </div>
 
             <div className={styles.contenBoton}>
+              <button className={styles.boton} type="button" onClick={salir}>
+                Salir
+              </button>
               <button
                 className={styles.boton}
                 type="button"
@@ -169,11 +177,19 @@ export const PerfildeUsuario = () => {
             </div>
 
             <div className={styles.contenBoton}>
+              <button className={styles.boton} type="submit">
+                Actualizar
+              </button>
+
               <button className={styles.boton} type="button" onClick={cancel}>
                 Cancelar
               </button>
-              <button className={styles.boton} type="submit">
-                Actualizar
+
+              <button
+                className={styles.boton}
+                type="button"
+                onClick={actualizarPassword}>
+                Cambiar Password
               </button>
             </div>
           </form>
@@ -181,4 +197,6 @@ export const PerfildeUsuario = () => {
       )}
     </>
   );
-};
+}
+
+export default withRouter(PerfildeUsuario);

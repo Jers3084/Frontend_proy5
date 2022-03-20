@@ -11,7 +11,7 @@ export const Home = () => {
         <article className={styles.txtSeccion1}>
           <h1 className={styles.titulo}>Tu salud en manos expertas</h1>
           <span className={styles.relleno} />
-          <p className={styles.txtCuerpo}>
+         
             <p className={styles.txtCuerpo}>
               Somos una clinica dedicada a la Fisioterapia con Técnicas de
               Masaje Terapeutico Tradicional Shiatsu Namikoshi. Acupuntura y
@@ -24,9 +24,9 @@ export const Home = () => {
               del codo, Tunel Carpiano, Ciatica, Lumbalgia, Circulatorias,
               Edemas, Linfidema, Lipodema, PostOperatorios, posFracturas, etc
             </p>
-            Para recuperar tu salud, acércate a nosotros y conoce nuestros
+            <p>Para recuperar tu salud, acércate a nosotros y conoce nuestros
             servicios
-          </p>
+            </p>
           <form action="formcorreo">
             <input
               className={styles.entradaCorreo}
@@ -119,10 +119,13 @@ export const Home = () => {
           </Link>
         </div>
         <hr />
-        <p className={styles.copyright}>
-          © 2021 Vid Natura. Todos los derechos reservados. Esta es una página
+        <div className={styles.txtpie}>
+        <p className={styles.copyright}>Dirección: Calle Campo Tecominoacan 126, Fracc. Carrizal, Villahermosa,Tabasco. Telefono: 993 316 7259. Horario: 10 am a 5 pm.
+        </p>
+        <p className={styles.copyright}>© 2021 Vid Natura. Todos los derechos reservados. Esta es una página
           de aterrizaje ficticia para fines académicos.
         </p>
+        </div>
       </footer>
     </>
   );

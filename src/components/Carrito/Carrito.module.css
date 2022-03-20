@@ -12,7 +12,10 @@
 }
 
 .buttoncontainer {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   padding: 20px;
   text-align: center;
 }
-

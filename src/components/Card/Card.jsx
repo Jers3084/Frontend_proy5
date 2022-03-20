@@ -4,6 +4,7 @@ import styles from "./Card.module.css"
 
 export const Card = (props) => {
   const { userc, setUserc } = useContext(UserContext);
+  
   const agregar = () => {
     userc.shopping.push(props);
     console.log(userc.shopping);

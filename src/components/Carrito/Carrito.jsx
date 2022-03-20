@@ -11,8 +11,9 @@ export const Carrito = () => {
       const add = { nombre: p.nombre, precio: p.precio, cantidad: 1 };
       body.articulos.push(add);
     });
+    
     console.log(body);
-    fetch("http://localhost:9000/api/pagos", {
+    fetch("http://35.192.83.171:9000/api/pagos", {
       method: "POST",
       body: JSON.stringify(body),
       headers: {

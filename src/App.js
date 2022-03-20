@@ -5,11 +5,11 @@ import { Navbar } from './components/Navbar/Navbar'
 import { Catalogo } from './components/Catalogo/Catalogo'
 import { Carrito } from './components/Carrito/Carrito'
 import { Registro } from './components/Registro/Registro'
-import { IniciarSesion } from './components/IniciarSesion/IniciarSesion'
-import { Detalle } from './components/Detalle/Detalle'
+import IniciarSesion from './components/IniciarSesion/IniciarSesion'
 import { Home } from './components/Home/Home'
 import { UserContext } from './Context/UserContext'
-import { PerfildeUsuario } from './components/PerfildeUsuario/PerfildeUsuario'
+import PerfildeUsuario from './components/PerfildeUsuario/PerfildeUsuario'
+import CambiarPassword from './components/CambiarPassword/CambiarPassword'
 
 function App() {
   const [userc, setUserc] = useState({ token: false, shopping: [] })
@@ -35,8 +35,8 @@ function App() {
             <Route path="/registro">
               <Registro />
             </Route>
-            <Route path="/detalle/:id">
-              <Detalle />
+            <Route path="/cambiarpassword">
+              <CambiarPassword />
             </Route>
             <Route path="/" exact>
               <Home />

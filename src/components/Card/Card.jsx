@@ -1,13 +1,17 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../../Context/UserContext";
-import styles from "./Card.module.css"
+import styles from "./Card.module.css";
 
 export const Card = (props) => {
   const { userc, setUserc } = useContext(UserContext);
-  
+  var [cont, setCont] = useState(0);
+
   const agregar = () => {
     userc.shopping.push(props);
     console.log(userc.shopping);
+    var long = userc.shopping.length;
+
+    console.log(userc.shopping[long - 1].codigo);
 
     setUserc({ ...userc });
   };

@@ -4,6 +4,7 @@ import styles from "./Carrito.module.css";
 
 export const Carrito = () => {
   const { userc } = useContext(UserContext);
+  var cont = 0;
 
   const pagar = () => {
     const body = { articulos: [] };
@@ -11,7 +12,7 @@ export const Carrito = () => {
       const add = { nombre: p.nombre, precio: p.precio, cantidad: 1 };
       body.articulos.push(add);
     });
-    
+
     console.log(body);
     fetch("http://35.192.83.171:9000/api/pagos", {
       method: "POST",
@@ -52,9 +53,10 @@ export const Carrito = () => {
         <h3>Carrito</h3>
         <ul className="list-group">
           {userc.shopping.map((x) => {
+            cont = cont + 1;
             return (
               <li
-                key={x._id}
+                key={cont}
                 className="list-group-item d-flex justify-content-between align-items-center">
                 {x.nombre}
                 <span className="badge bg-primary rounded-pill">1</span>

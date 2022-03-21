@@ -11,8 +11,6 @@ const IniciarSesion = (props) => {
   const [usuario, setUsuario] = useState("");
   var registro = "";
 
-  
-
   useEffect(() => {
     setUsuario(sessionStorage.getItem("cuentaUsuario"));
     setTokenS(sessionStorage.getItem("tokenUsuario"));
@@ -40,18 +38,22 @@ const IniciarSesion = (props) => {
       })
         .then((response) => response.json())
         .then((response) => {
-          const tokenU = response.data.token;
-          const cUsuario = response.data.user.username;
-          const nombre = response.data.user.nombre;
-          const correo = response.data.user.email;
-          const id = response.data.user._id;
-          sessionStorage.setItem("tokenUsuario", tokenU);
-          sessionStorage.setItem("cuentaUsuario", cUsuario);
-          sessionStorage.setItem("nombreUsuario", nombre);
-          sessionStorage.setItem("correoUsuario", correo);
-          sessionStorage.setItem("idUsuario", id);
-          userc.token = true;
-          setUserc({ ...userc });
+          if (response.success) {
+            const tokenU = response.data.token;
+            const cUsuario = response.data.user.username;
+            const nombre = response.data.user.nombre;
+            const correo = response.data.user.email;
+            const id = response.data.user._id;
+            sessionStorage.setItem("tokenUsuario", tokenU);
+            sessionStorage.setItem("cuentaUsuario", cUsuario);
+            sessionStorage.setItem("nombreUsuario", nombre);
+            sessionStorage.setItem("correoUsuario", correo);
+            sessionStorage.setItem("idUsuario", id);
+            userc.token = true;
+            setUserc({ ...userc });
+          } else {
+            alert("usuario o password erroneos");
+          }
         });
     } catch (e) {
       console.log("hubo un error");

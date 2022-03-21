@@ -4,7 +4,7 @@ import styles from "./Card.module.css";
 
 export const Card = (props) => {
   const { userc, setUserc } = useContext(UserContext);
-  var [cont, setCont] = useState(0);
+  var [cont, setCont] = useState(1);
 
   const sumar = () => {
     const exist = props.stock;
@@ -15,18 +15,19 @@ export const Card = (props) => {
   };
 
   const restar = () => {
-    if (cont <= 0) {
+    if (cont <= 1) {
       return;
     }
     setCont(cont - 1);
   };
 
   const agregar = () => {
-    userc.shopping.push(props);
-    console.log(userc.shopping);
-    var long = userc.shopping.length;
+    const add = { codigo: props.codigo, nombre: props.nombre, descripcion: props.descripcion, imagen: props.imagen, precio: props.precio, cantidad: cont };
+    userc.shopping.push(add);
+    //console.log(userc.shopping);
+   // var long = userc.shopping.length;
 
-    console.log(userc.shopping[long - 1].codigo);
+   // console.log(userc.shopping[long - 1].codigo);
 
     setUserc({ ...userc });
   };

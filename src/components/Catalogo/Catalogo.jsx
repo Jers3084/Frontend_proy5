@@ -16,7 +16,7 @@ export const Catalogo = () => {
       .then((value) => {
         if (value.success) {
           setProducts(value.data);
-          console.log(value.data);
+          //console.log(value.data);
         }
       });
   };

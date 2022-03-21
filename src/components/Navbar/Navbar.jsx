@@ -7,8 +7,8 @@ import flag from './Img/Bandera.png'
 export const Navbar = () => {
   const { userc, setUserc } = useContext(UserContext)
   var usuario = sessionStorage.getItem('cuentaUsuario')
-  const etoken = userc
-  console.log(etoken)
+  //const etoken = userc
+  //console.log(etoken)
 
   const logout = () => {
     sessionStorage.setItem('tokenUsuario', null)

@@ -6,6 +6,21 @@ export const Card = (props) => {
   const { userc, setUserc } = useContext(UserContext);
   var [cont, setCont] = useState(0);
 
+  const sumar = () => {
+    const exist = props.stock;
+    if (cont >= exist) {
+      return;
+    }
+    setCont(cont + 1);
+  };
+
+  const restar = () => {
+    if (cont <= 0) {
+      return;
+    }
+    setCont(cont - 1);
+  };
+
   const agregar = () => {
     userc.shopping.push(props);
     console.log(userc.shopping);
@@ -28,6 +43,26 @@ export const Card = (props) => {
           <button type="button" className="btn btn-primary" onClick={agregar}>
             Agregar
           </button>
+          <div>
+            <button
+              type="button"
+              className={styles.boton_mas_menos}
+              onClick={restar}>
+              -
+            </button>
+            <input
+              type="number"
+              className={styles.inputcantidad}
+              readOnly
+              value={cont}
+            />
+            <button
+              type="button"
+              className={styles.boton_mas_menos}
+              onClick={sumar}>
+              +
+            </button>
+          </div>
           <p className={styles.precio}> Precio: {props.precio}</p>
         </div>
       </div>

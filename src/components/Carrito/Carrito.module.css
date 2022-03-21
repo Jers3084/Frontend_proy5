@@ -19,3 +19,41 @@
   padding: 20px;
   text-align: center;
 }
+
+.listado_ul {
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style:none;
+  font-size: 1.5rem;
+}
+
+.list_group_item1 {
+  width: 40%;
+  margin-top: 10px;
+  color: black;
+  font-weight: bolder;
+}
+
+.list_group_item2 {
+  width: 10%;
+  margin-top: 10px;
+  color: black;
+  font-weight: bolder;
+}
+
+.list_group_item3 {
+  width: 10%;
+  margin-top: 10px;
+  color: black;
+  font-weight: bolder;
+}
+
+.list_group_item4 {
+  width: 20%;
+  margin-top: 10px;
+  color: black;
+  font-weight: bolder;
+}

@@ -51,16 +51,18 @@ export const Carrito = () => {
     <>
       <div className={styles.contenedor}>
         <h3>Carrito</h3>
-        <ul className="list-group">
+        <ul class={styles.listado_ul}>
           {userc.shopping.map((x) => {
             cont = cont + 1;
             return (
-              <li
-                key={cont}
-                className="list-group-item d-flex justify-content-between align-items-center">
-                {x.nombre}
-                <span className="badge bg-primary rounded-pill">1</span>
-              </li>
+              <>
+                <li key={cont} className={styles.list_group_item1}>
+                  {x.nombre}
+                </li>
+                <li key={cont+50} className={styles.list_group_item2}>{x.precio}</li>
+                <li key={cont+100} className={styles.list_group_item3}>{x.cantidad}</li>
+                <li key={cont+200} className={styles.list_group_item4}>{x.precio * x.cantidad}</li>
+              </>
             );
           })}
         </ul>

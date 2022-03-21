@@ -15,3 +15,13 @@
 .precio {
   height: 10px;
 }
+
+.inputcantidad {
+  width: 28px;
+  align-self: center;
+  
+}
+
+.boton_mas_menos {
+  width: 20px;
+}

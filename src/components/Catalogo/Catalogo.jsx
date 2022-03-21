@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {Card} from "../Card/Card";
+import { Card } from "../Card/Card";
 import styles from "./Catalogo.module.css";
-
 
 export const Catalogo = () => {
   const [products, setProducts] = useState([]);
@@ -22,17 +21,14 @@ export const Catalogo = () => {
   };
 
   return (
-    < >
+    <>
       <div className={styles.contenedor}>
-      <h2>Productos</h2>
         <div className="row row-cols-1 row-cols-md-3 g-4 ">
-        {products.map((x) => {
-          return <Card key={x._id} {...x} />;
-        })}
+          {products.map((x) => {
+            return <Card key={x._id} {...x} />;
+          })}
         </div>
       </div>
     </>
   );
 };
-
- 

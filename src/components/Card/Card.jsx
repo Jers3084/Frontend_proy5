@@ -21,16 +21,33 @@ export const Card = (props) => {
     setCont(cont - 1);
   };
 
-  const agregar = () => {
-    const add = { codigo: props.codigo, nombre: props.nombre, descripcion: props.descripcion, imagen: props.imagen, precio: props.precio, cantidad: cont };
-    userc.shopping.push(add);
-    //console.log(userc.shopping);
-   // var long = userc.shopping.length;
-
-   // console.log(userc.shopping[long - 1].codigo);
-
-    setUserc({ ...userc });
-  };
+  function agregar() {
+    var found = false;
+    userc.shopping.map((x) => {
+      if (x.codigo === props.codigo) {
+        x.cantidad = x.cantidad + cont;
+        userc.cantidad = userc.cantidad + cont;
+        setUserc({ ...userc });
+        found = true;
+      }
+      return found;
+    });
+    if (!found) {
+      console.log(found);
+      const add = {
+        codigo: props.codigo,
+        nombre: props.nombre,
+        descripcion: props.descripcion,
+        imagen: props.imagen,
+        precio: props.precio,
+        cantidad: cont,
+      };
+      userc.shopping.push(add);
+      userc.cantidad = userc.cantidad + cont;
+      setUserc({ ...userc });
+    }
+    return;
+  }
 
   return (
     <div className="col">

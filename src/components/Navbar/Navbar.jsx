@@ -7,8 +7,6 @@ import flag from './Img/Bandera.png'
 export const Navbar = () => {
   const { userc, setUserc } = useContext(UserContext)
   var usuario = sessionStorage.getItem('cuentaUsuario')
-  //const etoken = userc
-  //console.log(etoken)
 
   const logout = () => {
     sessionStorage.setItem('tokenUsuario', null)
@@ -37,7 +35,7 @@ export const Navbar = () => {
           </li>
           <li className={styles.li}>
             <Link to="/carrito" className={styles.link}>
-              Carrito {userc.shopping.length}
+              Carrito {userc.cantidad}
             </Link>
           </li>
           <li className={styles.space}>

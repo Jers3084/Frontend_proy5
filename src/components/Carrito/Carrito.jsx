@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../../Context/UserContext";
 import styles from "./Carrito.module.css";
 
 export const Carrito = () => {
   const { userc } = useContext(UserContext);
-  var cont = 0;
+  var cant = 0;
+  var max = 0;
+  var itemkey = 10;
   var importe = 0;
 
   const pagar = () => {
@@ -48,63 +50,60 @@ export const Carrito = () => {
     });
   };
 
+  const borrar = () => {
+    console.log(sessionStorage.getItem("index"));
+    //userc.shopping.splice(item, 1);
+  };
+
   return (
-    <>
-      <div className={styles.contenedor}>
-        <h3>Carrito</h3>
-        <ul className={styles.listado_ul}>
-          <>
-            <li key={cont} className={styles.list_group_item1}>
-              Articulo o Servicio
-            </li>
-            <li key={cont + 50} className={styles.list_group_item2}>
-              Precio Unitario{" "}
-            </li>
-            <li key={cont + 100} className={styles.list_group_item3}>
-              Cantidad
-            </li>
-            <li key={cont + 200} className={styles.list_group_item4}>
-              Importe
-            </li>
-          </>
-          {userc.shopping.map((x) => {
-            cont = cont + 1;
-            importe = (importe+(x.precio * x.cantidad));
-            return (
-              <>
-                <li key={cont} className={styles.list_group_item1}>
-                  {x.nombre}
-                </li>
-                <li key={cont + 50} className={styles.list_group_item2}>
-                  {x.precio}
-                </li>
-                <li key={cont + 100} className={styles.list_group_item3}>
-                  {x.cantidad}
-                </li>
-                <li key={cont + 200} className={styles.list_group_item4}>
-                  {x.precio * x.cantidad}
-                </li>
-              </>
-            );
-          })}
-          <>
-            <li key={cont} className={styles.list_group_item1}></li>
-            <li key={cont + 50} className={styles.list_group_item2}></li>
-            <li key={cont + 100} className={styles.list_group_item5}>
-              Total:
-            </li>
-            <li key={cont + 200} className={styles.list_group_item4}>
-            {importe}
-            </li>
-          </>
-        </ul>
-        <div className={styles.buttoncontainer}>
-          <button type="button" className="btn btn-success" onClick={pagar}>
-            Proceder
-          </button>
-          <div className="cho-container"></div>
-        </div>
+    <div className={styles.contenedor}>
+      <h3>Carrito de compras</h3>
+      <div key={1} className={styles.subcontenedor}>
+        <div className={styles.list_nombre}>Nombre</div>
+        <div className={styles.list_precio}>Precio</div>
+        <div className={styles.list_cantidad}>Cantidad</div>
+        <div className={styles.list_importe}>Importe</div>
+        <div className={styles.contenedorBoton}>Eliminar</div>
       </div>
-    </>
+
+      <div className={styles.subcontenedor}>
+        {userc.shopping.map((x) => {
+          itemkey = itemkey + 1;
+          importe = importe + x.precio * x.cantidad;
+          max = x.stock;
+          sessionStorage.setItem("index", x.index);
+          return (
+            <>
+              <div key={itemkey} className={styles.list_nombre}>
+                {x.nombre}
+              </div>
+              <div className={styles.list_precio}>{x.precio}</div>
+              <div className={styles.list_cantidad}>{x.cantidad}</div>
+              <div className={styles.list_importe}>{x.precio * x.cantidad}</div>
+              <div className={styles.contenedorBoton}>
+                {sessionStorage.setItem("index", x.index)}
+                <button type="button" className={styles.boton} onClick={borrar}>
+                  Eliminar
+                </button>
+              </div>
+            </>
+          );
+        })}
+      </div>
+
+      <div key={2} className={styles.subcontenedor}>
+        <div className={styles.list_nombre}></div>
+        <div className={styles.list_precio}></div>
+        <div className={styles.list_cantidad}>Total:</div>
+        <div className={styles.list_importe}>{importe}</div>
+        <div className={styles.contenedorBoton}></div>
+      </div>
+      <div className={styles.buttoncontainer}>
+        <button type="button" className="btn btn-success" onClick={pagar}>
+          Proceder
+        </button>
+        <div className="cho-container"></div>
+      </div>
+    </div>
   );
 };

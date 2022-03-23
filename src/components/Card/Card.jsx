@@ -33,16 +33,20 @@ export const Card = (props) => {
       return found;
     });
     if (!found) {
-      console.log(found);
+      var conse = userc.index;
       const add = {
         codigo: props.codigo,
         nombre: props.nombre,
         descripcion: props.descripcion,
         imagen: props.imagen,
         precio: props.precio,
+        stock: props.stock,
         cantidad: cont,
+        index: conse,
       };
       userc.shopping.push(add);
+      conse = conse + 1;
+      userc.index = conse;
       userc.cantidad = userc.cantidad + cont;
       setUserc({ ...userc });
     }

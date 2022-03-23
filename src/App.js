@@ -12,8 +12,8 @@ import PerfildeUsuario from './components/PerfildeUsuario/PerfildeUsuario'
 import CambiarPassword from './components/CambiarPassword/CambiarPassword'
 
 function App() {
-  const [userc, setUserc] = useState({ token: false, shopping: [], cantidad:0 })
-
+  const [userc, setUserc] = useState({ token: false, shopping: [], cantidad:0, index:0 })
+  
   return (
     <>
       <UserContext.Provider value={{ userc, setUserc }}>

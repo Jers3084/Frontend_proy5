@@ -1,15 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
+import { withRouter } from "react-router-dom";
 import { UserContext } from "../../Context/UserContext";
 import styles from "./Carrito.module.css";
 
-export const Carrito = () => {
-  const { userc } = useContext(UserContext);
-  var cant = 0;
-  var max = 0;
+const Carrito = (props) => {
+  const { userc, setUserc } = useContext(UserContext);
+  var tokencar = sessionStorage.getItem("tokenUsuario");
   var itemkey = 10;
   var importe = 0;
 
   const pagar = () => {
+    console.log(tokencar);
+    if (tokencar === null) {
+      alert("Debe Iniciar Sesion");
+      props.history.push("/iniciarsesion");
+    }
     const body = { articulos: [] };
     userc.shopping.forEach((p) => {
       const add = { nombre: p.nombre, precio: p.precio, cantidad: p.cantidad };
@@ -50,9 +55,10 @@ export const Carrito = () => {
     });
   };
 
-  const borrar = () => {
-    console.log(sessionStorage.getItem("index"));
-    //userc.shopping.splice(item, 1);
+  const borrar = (item) => {
+    userc.shopping.splice(item, 1);
+    userc.cantidad = userc.cantidad - item.cantidad;
+    setUserc({ ...userc });
   };
 
   return (
@@ -70,19 +76,20 @@ export const Carrito = () => {
         {userc.shopping.map((x) => {
           itemkey = itemkey + 1;
           importe = importe + x.precio * x.cantidad;
-          max = x.stock;
-          sessionStorage.setItem("index", x.index);
           return (
             <>
-              <div key={itemkey} className={styles.list_nombre}>
+              <div key={x.index} className={styles.list_nombre}>
                 {x.nombre}
               </div>
               <div className={styles.list_precio}>{x.precio}</div>
               <div className={styles.list_cantidad}>{x.cantidad}</div>
               <div className={styles.list_importe}>{x.precio * x.cantidad}</div>
               <div className={styles.contenedorBoton}>
-                {sessionStorage.setItem("index", x.index)}
-                <button type="button" className={styles.boton} onClick={borrar}>
+                <button
+                  type="button"
+                  className={styles.boton}
+                  onClick={() => borrar(x)}
+                >
                   Eliminar
                 </button>
               </div>
@@ -107,3 +114,4 @@ export const Carrito = () => {
     </div>
   );
 };
+export default withRouter(Carrito);

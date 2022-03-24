@@ -64,7 +64,7 @@ const Carrito = (props) => {
   return (
     <div className={styles.contenedor}>
       <h3>Carrito de compras</h3>
-      <div key={1} className={styles.subcontenedor}>
+      <div key={50} className={styles.subcontenedor}>
         <div className={styles.list_nombre}>Nombre</div>
         <div className={styles.list_precio}>Precio</div>
         <div className={styles.list_cantidad}>Cantidad</div>
@@ -81,15 +81,20 @@ const Carrito = (props) => {
               <div key={x.index} className={styles.list_nombre}>
                 {x.nombre}
               </div>
-              <div className={styles.list_precio}>{x.precio}</div>
-              <div className={styles.list_cantidad}>{x.cantidad}</div>
-              <div className={styles.list_importe}>{x.precio * x.cantidad}</div>
-              <div className={styles.contenedorBoton}>
+              <div key={x.index + 50} className={styles.list_precio}>
+                {x.precio}
+              </div>
+              <div key={x.index + 100} className={styles.list_cantidad}>
+                {x.cantidad}
+              </div>
+              <div key={x.index + 150} className={styles.list_importe}>
+                {x.precio * x.cantidad}
+              </div>
+              <div key={x.index + 200} className={styles.contenedorBoton}>
                 <button
                   type="button"
                   className={styles.boton}
-                  onClick={() => borrar(x)}
-                >
+                  onClick={() => borrar(x)}>
                   Eliminar
                 </button>
               </div>
@@ -98,7 +103,7 @@ const Carrito = (props) => {
         })}
       </div>
 
-      <div key={2} className={styles.subcontenedor}>
+      <div className={styles.subcontenedor}>
         <div className={styles.list_nombre}></div>
         <div className={styles.list_precio}></div>
         <div className={styles.list_cantidad}>Total:</div>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Home.module.css";
 import facebook from "./img/facebook_social_media_icon_gris.png";
 import instagram from "./img/circlesocialinstagram_gris.png";
 
+
+
 export const Home = () => {
+  const [correo, setCorreo] = useState("");
+
   return (
     <>
       <section className={styles.seccion1}>
@@ -34,6 +38,11 @@ export const Home = () => {
               name="correo"
               id="correodecontacto"
               placeholder="  Ingresa tu correo"
+              value={correo}
+              required
+              onChange={(e) => {
+              setCorreo(e.target.value)
+            }}
             />
             <button className={styles.boton}>Enviar</button>
           </form>

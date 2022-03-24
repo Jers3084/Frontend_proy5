@@ -8,14 +8,15 @@ const IniciarSesion = (props) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [tokenS, setTokenS] = useState("");
-  const [usuario, setUsuario] = useState("");
-  var registro = "";
+  const [registro, setRegistro] = useState("");
+
+  //var registro = "";
 
   useEffect(() => {
-    setUsuario(sessionStorage.getItem("cuentaUsuario"));
     setTokenS(sessionStorage.getItem("tokenUsuario"));
     if (tokenS === "") {
-      registro = "No se ha registrado";
+      //registro = "No se ha registrado";
+      setRegistro("No se ha registrado");
     }
   }, [tokenS]);
 

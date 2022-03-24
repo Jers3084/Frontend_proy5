@@ -14,7 +14,6 @@ const IniciarSesion = (props) => {
   useEffect(() => {
     setUsuario(sessionStorage.getItem("cuentaUsuario"));
     setTokenS(sessionStorage.getItem("tokenUsuario"));
-    console.log(tokenS);
     if (tokenS === "") {
       registro = "No se ha registrado";
     }
@@ -51,6 +50,9 @@ const IniciarSesion = (props) => {
             sessionStorage.setItem("idUsuario", id);
             userc.token = true;
             setUserc({ ...userc });
+            setUsername("");
+            setPassword("");
+            props.history.push("/");
           } else {
             alert("usuario o password erroneos");
           }

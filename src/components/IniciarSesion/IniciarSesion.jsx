@@ -14,7 +14,6 @@ const IniciarSesion = (props) => {
   useEffect(() => {
     setTokenS(tok);
     if (tokenS === "") {
-      //registro = "No se ha registrado";
       setRegistro("No se ha registrado");
     }
   }, [tokenS, tok]);

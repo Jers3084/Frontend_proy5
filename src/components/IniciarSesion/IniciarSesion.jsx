@@ -9,16 +9,15 @@ const IniciarSesion = (props) => {
   const [password, setPassword] = useState("");
   const [tokenS, setTokenS] = useState("");
   const [registro, setRegistro] = useState("");
-
-  //var registro = "";
+  let tok = userc.tokenUsuario;
 
   useEffect(() => {
-    setTokenS(sessionStorage.getItem("tokenUsuario"));
+    setTokenS(tok);
     if (tokenS === "") {
       //registro = "No se ha registrado";
       setRegistro("No se ha registrado");
     }
-  }, [tokenS]);
+  }, [tokenS, tok]);
 
   const handleSubmitl = async (e) => {
     e.preventDefault();
@@ -43,12 +42,11 @@ const IniciarSesion = (props) => {
             const cUsuario = response.data.user.username;
             const nombre = response.data.user.nombre;
             const correo = response.data.user.email;
-            const id = response.data.user._id;
-            sessionStorage.setItem("tokenUsuario", tokenU);
+            userc.tokenUsuario = tokenU;
             sessionStorage.setItem("cuentaUsuario", cUsuario);
             sessionStorage.setItem("nombreUsuario", nombre);
             sessionStorage.setItem("correoUsuario", correo);
-            sessionStorage.setItem("idUsuario", id);
+            userc.idUsuario = response.data.user._id;
             userc.token = true;
             setUserc({ ...userc });
             setUsername("");

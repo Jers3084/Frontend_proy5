@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { withRouter } from "react-router-dom";
 import styles from "./PerfildeUsuario.module.css";
+import { UserContext } from "../../Context/UserContext";
 
 function PerfildeUsuario(props) {
-  var id = sessionStorage.getItem("idUsuario");
+  const { userc  } = useContext(UserContext);
+  var id = userc.idUsuario;
   var nombreU = sessionStorage.getItem("nombreUsuario");
   var usernameU = sessionStorage.getItem("cuentaUsuario");
   var correoU = sessionStorage.getItem("correoUsuario");
-  var token = sessionStorage.getItem("tokenUsuario");
+  var token = userc.tokenUsuario;
   const [editar, setEditar] = useState(false);
   const [nombre, setNombre] = useState(nombreU);
   const [email, setEmail] = useState(correoU);

@@ -90,3 +90,9 @@
   background-color: #000397;
   border: 1px solid #000397;
 }
+
+@media screen and (max-width: 701px) {
+  .formato {
+    width: 100%;
+  }
+}

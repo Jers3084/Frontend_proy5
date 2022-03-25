@@ -18,6 +18,8 @@ function App() {
     shopping: [],
     cantidad: 0,
     index: 0,
+    tokenUsuario:"",
+    idUsuario:"",
   });
 
   return (

@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { withRouter } from "react-router-dom";
 import styles from "./CambiarPassword.module.css";
+import { UserContext } from "../../Context/UserContext";
 
 const CambiarPassword = (props) => {
-  var id = sessionStorage.getItem("idUsuario");
+  const { userc } = useContext(UserContext);
+  var id = userc.idUsuario;
   var nombreU = sessionStorage.getItem("nombreUsuario");
-  var token = sessionStorage.getItem("tokenUsuario");
+  var token = userc.tokenUsuario;
   const [password, setPassword] = useState("");
   const [vpassword, setVpassword] = useState("");
 

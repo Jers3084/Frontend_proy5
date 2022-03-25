@@ -127,7 +127,6 @@ export const Home = () => {
             <img src={facebook} alt="" width="20px" height="20px" /> Facebook
           </a>
           <a
-            to=""
             className={styles.icono2}
             href="https://instagram.com/vida_natura_3084"
             target="_blank"

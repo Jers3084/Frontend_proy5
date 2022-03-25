@@ -126,9 +126,14 @@ export const Home = () => {
             rel="noopener noreferrer">
             <img src={facebook} alt="" width="20px" height="20px" /> Facebook
           </a>
-          <Link to="" className={styles.icono2}>
+          <a
+            to=""
+            className={styles.icono2}
+            href="https://instagram.com/vida_natura_3084"
+            target="_blank"
+            rel="noopener noreferrer">
             <img src={instagram} alt="" width="20px" height="20px" /> Instagram
-          </Link>
+          </a>
         </div>
         <hr />
         <div className={styles.txtpie}>

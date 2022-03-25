@@ -10,7 +10,6 @@ const Carrito = (props) => {
   var importe = 0;
 
   const pagar = () => {
-    console.log(tokencar);
     if (tokencar === null) {
       alert("Debe Iniciar Sesion");
       props.history.push("/iniciarsesion");

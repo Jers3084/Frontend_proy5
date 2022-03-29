@@ -46,8 +46,7 @@ export const Home = () => {
             <button className={styles.boton}>Enviar</button>
           </form>
           <p className={styles.txtPie}>
-            Te contactaremos en 24 horas. Aceptamos todas las tarjetas de
-            crédito y débito.
+            Te contactaremos en 24 horas. Aceptamos todas las tarjetas de crédito y débito.
           </p>
         </article>
         <article className={styles.imagenPrincipal} />
@@ -67,10 +66,8 @@ export const Home = () => {
         <section className={styles.tarjetas}>
           <div className={styles.tarjeta}>
             <div className={styles.imgAcupuntura}></div>
-            <br />
             <div className={styles.desc}>
               <h2>Acupuntura</h2>
-              <br />
               <p className={styles.descripciones}>
                 Disminuye el dolor cronico,libera el estrés y la ansiedad,
                 mejora el insomnio y disminuye reacciones alérgicas.
@@ -79,10 +76,8 @@ export const Home = () => {
           </div>
           <div className={styles.tarjeta}>
             <div className={styles.imgQuiropraxiaOsteopatia}></div>
-            <br />
             <div className={styles.desc}>
               <h2>Quiropraxia y Osteopatia</h2>
-              <br />
               <p className={styles.descripciones}>
                 Corrige la postura y elimina el dolor de espalda, cintura y
                 dolores de los huesos y musculos.
@@ -91,10 +86,8 @@ export const Home = () => {
           </div>
           <div className={styles.tarjeta}>
             <div className={styles.imgRehabilitacion}></div>
-            <br />
             <div className={styles.desc}>
               <h2>Rehabilitación Física</h2>
-              <br />
               <p className={styles.descripciones}>
                 Sana y recupera las capacidades motrices del individuo que ha
                 sido afectado por una lesión o enfermedad.
@@ -103,10 +96,8 @@ export const Home = () => {
           </div>
           <div className={styles.tarjeta}>
             <div className={styles.imgLinfatico}></div>
-            <br />
             <div className={styles.desc}>
               <h2>Drenaje Linfatico</h2>
-              <br />
               <p className={styles.descripciones}>
                 El drenaje linfatico ayuda a desinflamar el cuerpo y
                 extremidades,liberar toxinas y restablece el equilibrio y la

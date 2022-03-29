@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .seccion1 {
   padding-top: 80px;
   width: 100%vw;
@@ -11,15 +17,15 @@
 
 .txtSeccion1 {
   width: 58%;
-  height: 431px;
-  padding-top: 20px;
+  height: 100vh;
+  padding-top: 10px;
   color: white;
   padding-left: 5%;
 }
 
 .titulo {
-  margin-top: 30px;
-  font-size: 70px;
+  margin-top: 20px;
+  font-size: 50px;
 }
 
 .txtCuerpo {
@@ -28,7 +34,7 @@
 }
 
 .entradaCorreo {
-  margin-top: 30px;
+  margin-top: 5px;
   width: 80%;
   min-width: 20%;
   height: 50px;
@@ -53,7 +59,7 @@
 
 .imagenPrincipal {
   width: 40%;
-  height: 91.5vh;
+  height: 88vh;
   background-image: url(./img/vidanatura_foto1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,7 +68,7 @@
 .seccion2 {
   padding-top: 50px;
   width: 100%vw;
-  height: 700px;
+  height: 710px;
   background-color: #e9e7e7;
 }
 
@@ -136,9 +142,8 @@
 }
 
 .piedepagina {
-  margin-top: 90px;
+  margin-top: 70px;
   width: 100%vw;
-  height: 50px;
   background-color: #e9e7e7;
   align-items: center;
 }
@@ -165,6 +170,7 @@
 }
 
 .txtpie {
+  font-size: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -176,74 +182,63 @@
   color: gray;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1024px) {
   .seccion1 {
-    height: 1500px;
-    display: block;
-    flex-wrap: nowrap;
+    padding-top: 75px;
+    width: 100%vw;
+    height: 100%vh;
   }
 
   .txtSeccion1 {
-    width: 90%;
-    height: 500px;
-    padding-top: 100px;
+    width: 58%;
+    height: 100vh;
   }
 
   .titulo {
-    font-size: 40px;
+    margin-top: 0px;
+    font-size: 25px;
+  }
+
+  .txtCuerpo {
+    margin-top: 0px;
+    font-size: 15px;
+  }
+
+  .entradaCorreo {
+    margin-top: 0px;
+    min-width: 20%;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 15px;
+    border: #20b2aa 3px solid;
   }
 
   .boton {
-    display: block;
-    border-radius: 15px;
-    text-align: center;
+    font-size: 12px;
   }
 
   .txtPie {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    color: white;
     font-size: 13px;
   }
 
   .imagenPrincipal {
-    width: 100%;
-    height: 900px;
+    width: 40%;
+    height: 83.6vh;
+    background-image: url(./img/vidanatura_foto1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .seccion2 {
-    height: 800px;
-  }
-
-  footer {
-    height: 400px;
-  }
-
-  .pie {
     padding-top: 30px;
-    width: 100%vw;
-    height: 300px;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .redesSociales {
-    margin-bottom: 20px;
   }
 }
 
 @media screen and (max-width: 701px) {
-  .menucomprimido {
-    display: inline;
-    position: absolute;
-    right: 2%;
-    top: 3%;
-  }
-
   .seccion1 {
     padding-top: 0;
-    height: 1800px;
+    height: 1300px;
     display: block;
     flex-wrap: nowrap;
   }
@@ -251,12 +246,12 @@
   .txtSeccion1 {
     width: 90%;
     height: 100px;
-    padding-top: 100px;
+    padding-top: 10px;
   }
 
   .titulo {
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .formcorreo {
@@ -269,7 +264,7 @@
 
   .boton {
     display: block;
-    width: 93%;
+    width: 100%;
     text-align: center;
   }
 
@@ -279,7 +274,7 @@
   }
 
   .imagenPrincipal {
-    margin-top: 1000px;
+    margin-top: 500px;
     width: 100%;
     height: 700px;
     background-image: url(./img/vidanatura_foto1.jpg);
@@ -288,9 +283,9 @@
   }
 
   .seccion2 {
-    padding-top: 50px;
+    padding-top: 30px;
     width: 100%vw;
-    height: auto;
+    height: 1500px;
   }
 
   .tarjetas {
@@ -307,21 +302,31 @@
     padding-bottom: 20px;
   }
 
-  footer {
-    height: 400px;
+  .pie {
+    padding-top: 0px;
+    width: 100%vw;
+    height: 10px;
   }
 
-  .pie {
-    padding-top: 30px;
-    width: 100%vw;
-    height: 300px;
-    display: block;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  .piedepagina {
+    margin-top: 485px;
   }
 
   .redesSociales {
-    margin-bottom: 20px;
+    width: 100%;
+    height: 20px;
+  }
+
+  .txtpie {
+    font-size: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .copyright {
+    font-size: 10px;
+    text-align: center;
+    color: gray;
   }
 }
